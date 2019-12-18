@@ -32,7 +32,7 @@ def allocate_memory(size):
         partition[x + 1][0] = partition[x + 1][0] + size
         partition[x + 1][1] = partition[x + 1][1] - size
     for i in range(size):
-        memory[partition[x][0]+i] = True
+        memory[partition[x][0] + i] = True
     return True
 
 
@@ -83,7 +83,7 @@ def recovery():
         print("没有这个进程!")
         return
     for i in range(partition[index_num][1]):
-        memory[partition[index_num][0]+i] = False
+        memory[partition[index_num][0] + i] = False
     if index_num == 0:
         partition[index_num][2] = False
         if not partition[index_num + 1][2]:
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     initial(int(input()))
     while True:
         print("""
-        
+
 *******************
 菜单：
 1.查看内存使用情况
